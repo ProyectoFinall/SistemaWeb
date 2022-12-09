@@ -1,0 +1,9 @@
+<!-- app.component.html -->
+<div class="loadingState" *ngIf="displayLoading">
+  <p-progressSpinner></p-progressSpinner>
+</div>
+<app-navigate></app-navigate>
+<div>
+  <p-toast position="bottom-right"></p-toast>
+  <router-outlet></router-outlet>
+</div>

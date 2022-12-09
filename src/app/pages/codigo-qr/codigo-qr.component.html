@@ -1,0 +1,29 @@
+<div class="w3-container">
+    <form class="custom-form" >
+        <h1>Código QR</h1>
+        <div id="qr">
+            <ngx-qrcode 
+            [elementType]="elementType" 
+            [value]="value" 
+            cssClass="aclass"
+            [errorCorrectionLevel]="correctionLevel">
+            </ngx-qrcode>
+            <br>
+            <button class="login-btn" src="img" onclick="javascript:window.print(qr)">Imprimir Código QR</button>
+            <br>
+            <button type="submit" class="login-btn" routerLink="/menu">Listo</button>
+        </div>
+        <script>
+            function printQR(qr){
+            var printContents = document.getElementById('qr').innerHTML;
+                    w = window.open();
+                    w.document.write(printContents);
+                    w.document.close(); // necessary for IE >= 10
+                    w.focus(); // necessary for IE >= 10
+                    w.print();
+                    w.close();
+                    return true;}
+            </script>
+    </form>
+
+</div>

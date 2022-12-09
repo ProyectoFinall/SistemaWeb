@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-12">
+            <div class="card">
+                <p-table #dt1 [value]="listado" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll" [rowsPerPageOptions]="[10,50,100]" [globalFilterFields]="['nomObra','material','procesoNombre']" [scrollable]="true" scrollHeight="800px" >
+                    <ng-template pTemplate="caption">        
+                        <div class="p-d-flex">
+                            <p-button label="Regresar" icon="pi pi-arrow-circle-left" routerLink="/menu"></p-button>
+                            <span style="padding: 550px;"></span>
+                            <span class="p-input-icon-left p-ml-auto">
+                                <i class="pi pi-search"></i>
+                                <input  pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" placeholder="Nombre Obra/Material/Proceso" />
+                            </span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="clvViga">
+                                Clave de Obra
+                                <p-sortIcon field=""></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="nomObra">
+                                Nombre de Obra
+                                <p-sortIcon field="id"></p-sortIcon>
+                            </th>
+                            <th>Clave de Viga</th>
+                            <th>Largo de Viga</th>
+                            <th>Peso de Viga</th>
+                            <th>Material</th>
+                            <th>Nombre de Proceso</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-columns="listado" let-listado>
+                        <tr>
+                            <td>{{listado.clvObra}}</td>
+                            <td>{{listado.nomObra}}</td>
+                            <td>{{listado.clvViga}}</td>
+                            <td>{{listado.largo}}</td>
+                            <td>{{listado.peso}}</td>
+                            <td>{{listado.material}}</td>
+                            <td>{{listado.procesoNombre}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div><!--termina class card-->
+    </div>
+</div>

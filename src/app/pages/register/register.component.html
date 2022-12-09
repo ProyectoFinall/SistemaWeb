@@ -1,0 +1,30 @@
+<!-- register.component.html -->
+
+<div class="w3-container">
+  <form class="custom-form" [formGroup]="form">
+    <h1>Registro de Usuarios</h1>
+    <input
+      formControlName="NumEmpleado"
+      name="NumEmpleado"
+      placeholder="Nombre del empleado"
+      required="required"
+    />
+    <input
+      type="password"
+      formControlName="password"
+      name="contraseña"
+      placeholder="Contraseña"
+      required="required"
+    />
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      name="contraseña"
+      placeholder="Repetir contraseña"
+      required="required"
+    />
+    <button (click)="register()" class="register-btn">Registrar</button>
+    <br />
+    <button class="register-btn" routerLink="/menu">Cancelar</button>
+  </form>
+</div>

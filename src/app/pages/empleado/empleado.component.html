@@ -1,0 +1,25 @@
+<!-- register.component.html -->
+
+<div class="w3-container">
+    <form class="custom-form" [formGroup]="form" method="post">
+      <h1>Registro de Empleados</h1>
+      <br>
+      <span>Nombre(s):</span>
+      <input
+      formControlName="NomEmpleado" pattern="[a-zA-Z ]*" type="text" name="nomEmpleado" placeholder="Nombre(s)" required="required" />
+      <span>Apellido Paterno:</span>
+      <input
+      formControlName="Apaterno" type="text" name="apaterno" placeholder="Apellido Paterno" required="required" />
+      <span>Apellido Materno:</span>
+      <input
+      formControlName="Amaterno" type="text" name="amaterno" placeholder="Apellido Materno" required="required" />
+      <span>Puesto:</span>
+      <input
+      formControlName="Puesto" type="text" name="puesto" placeholder="Puesto" required="required" />
+
+      <button type="submit" (click)="register()" class="register-btn">Registrar</button>
+      <br>
+      <button type="submit" class="register-btn" routerLink="/menu">Cancelar</button>
+  
+    </form>
+  </div>

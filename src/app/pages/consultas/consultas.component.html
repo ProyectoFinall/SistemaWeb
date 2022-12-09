@@ -1,0 +1,106 @@
+<form class="custom-form" [formGroup]="form">
+      <div class="date"> 
+        <span>Fecha de inicio:</span>
+        <input type="date"formControlName="desde" name="fechaInicio" placeholder="Fecha inicial" required="required" />
+        <span>Fecha final:</span>
+        <input type="date"formControlName="hasta" name="fechaFinal" placeholder="Fecha final" required="required" />
+        </div>
+      <button (click)="getItems()" class="register-btn" >Consultar</button>
+    
+<br/>
+
+<span>Total de Vigas:</span>
+<input formControlName="totalVigas" placeholder="Total de Vigas"  />
+<span>Total de Kilos:</span>
+<input formControlName="peso" placeholder="Total de Peso"  />
+<span>Total de Kilos en Armado:</span>
+<input type="number" formControlName="totalArmado" name="kgArmado" placeholder="Total de Kilos en Armado" />
+<span>Total de Kilos en Soldado:</span>
+<input type="number" formControlName="totalSoldado" name="kgSoldado" placeholder="Total de kilos en Soldado" />
+<span>Total de Kilos en Pulido:</span>
+<input type="number" formControlName="totalPulido" name="kgPulido" placeholder="Total de kilos en Pulido" />
+<span>Total de Kilos en Limpieza:</span>
+<input type="number" formControlName="totalLimpieza" name="kgLimpieza" placeholder="Total de Kilos en Limpieza" />
+<span>Total de Kilos en Pintura:</span>
+<input type="number" formControlName="totalPintura" name="kgPintura" placeholder="Total de kilos en Pintura" />
+<button class="register-btn" routerLink="/menu">Regresar</button>
+
+</form>
+<!-- <div class="custom-table">
+
+<div class="card p-shadow-6 p-py-3 p-px-4">
+  <p-table [value]="items" [lazy]="true" [(first)]="tableOffset" [paginator]="true"
+    [rows]="12" [totalRecords]="totalItems" [rowsPerPageOptions]="[6,12,18]" styleClass="p-datatable-sm">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="t-a-l">Total de Piezas</th>
+        <th class="t-a-l">Total de Kilos</th>
+        <th class="t-a-l">Total de Armado</th>
+        <th class="t-a-l">Total de Soldado</th>
+        <th class="t-a-l">Total de Pulido</th>
+        <th class="t-a-l">Total de Limpieza</th>
+        <th class="t-a-l">Total de Pintura</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr *ngIf="loadingS" [@appearAnimation]="{ value: '', params: { duration: '150ms' } }">
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+          <p-skeleton height="25px" borderRadius="10px"></p-skeleton>
+        </td>
+        <td>
+      </tr>
+      <tr *ngIf="!loadingS" [@appearAnimation]="{ value: '', params: { duration: '150ms' } }">
+        <td class="t-a-l t-table-content">{{ item.peso }}</td>
+        <td class="t-a-l t-table-content">{{ item.TotKilos }}</td>
+        <td class="t-a-l t-table-content">{{ item.totalArmado }}</td>
+        <td class="t-a-l t-table-content">{{ item.totalSoldado }}</td>
+        <td class="t-a-l t-table-content">{{ item.totalPulido }}</td>
+        <td class="t-a-l t-table-content">{{ item.totalLimpieza }}</td>
+        <td class="t-a-l t-table-content">{{ item.totalPintura }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <div class="empty-state t-h6 tc-b40" *ngIf="!items.length">
+    No hay cargas horarias para este alumno
+  </div>
+</div>
+</div> -->
+<!-- 
+<div class="w3-container">
+    <form class="custom-form" method="post">
+      <h1>Consultas</h1>
+      <br>
+
+      <style>
+        
+      </style>
+
+      <div class="text">
+      <label>Fecha de inicio:</label>                                          
+      <label>Fecha final:</label>
+      </div>
+
+      <div class="date"> -->
+      <!-- <span>Fecha de inicio:</span> -->
+      <!-- <input type="date" name="fechaInicio" placeholder="Fecha inicial" required="required" /> -->
+      <!-- <span>Fecha final:</span> -->
+      <!-- <input type="date" name="fechaFinal" placeholder="Fecha final" required="required" />
+      </div> -->

@@ -1,0 +1,74 @@
+<div class="w3-container">
+  <form class="custom-form" [formGroup]="form" method="post">
+    <h1>Información</h1>
+    <br />
+
+    <!-- Obras -->
+
+    <div class="input-group" hidden="true">
+      <span class="p-float-label">Clave de la Viga:</span>
+      <input
+        type="id"
+        formControlName="ClvViga"
+        name="ClvViga"
+        placeholder="Clave de la Viga"
+        required="required"
+      />
+    </div>
+    <span>Obra</span>
+    <div class="p-field p-col-12 p-md-2">
+      <span>
+        <p-dropdown
+          [options]="combos.Obra"
+          formControlName="clvObra"
+          optionLabel="nomObra"
+          optionValue="clvObra"
+          [filter]="true"
+          emptyFilterMessage="Sin resultados..."
+          filterBy="nomObra"
+          [showClear]="true"
+          placeholder="Selecciona obra"
+        ></p-dropdown>
+      </span>
+    </div>
+    <!-- <span>Clave de obra:</span>
+      <input type="id" name="clvObra" placeholder="Clave de obra" required="required" /> -->
+    <span class="p-float-label">Largo de la Viga(mts):</span>
+    <input
+      type="number"
+      formControlName="LargoViga"
+      name="largoViga"
+      placeholder="Largo de la Viga"
+      required="required"
+    />
+    <span class="p-float-label">Peso de la Viga(kg):</span>
+    <input
+      type="number"
+      formControlName="PesoViga"
+      name="pesoViga"
+      placeholder="Peso de la Viga"
+      required="required"
+    />
+    <span class="p-float-label">Material:</span>
+    <input
+      type="text"
+      formControlName="Material"
+      name="material"
+      placeholder="Material"
+      required="required"
+    />
+
+    <button
+      [disabled]="clvObra != 0"
+      class="register-btn"
+      (click)="GuardarViga()"
+    >
+      Guardar
+    </button>
+    <br />
+    <button class="register-btn" routerLink="/menu">Cancelar</button>
+    <br />
+    <!-- <button class="register-btn" (click)="SendQR()">Imprimir código QR</button> -->
+    <!-- routerLink="/codigo-qr" -->
+  </form>
+</div>

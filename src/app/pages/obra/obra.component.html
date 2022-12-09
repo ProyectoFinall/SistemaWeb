@@ -1,0 +1,26 @@
+<div class="w3-container">
+  <form class="custom-form" [formGroup]="form" method="post">
+    <h1>Generar Obra</h1>
+    <br />
+    <span>Nombre de la Obra:</span>
+    <input
+      type="text"
+      formControlName="NomObra"
+      name="nomObra"
+      placeholder="Nombre de la Obra"
+      required="required"
+    />
+    <span>Cantidad de Vigas:</span>
+    <input
+    type="number"
+      formControlName="CantidadVigas"
+      name="cantidadVigas"
+      placeholder="Cantidad de Vigas"
+      required="required"
+    />
+
+    <button class="register-btn" (click)="GuardarObra()">Guardar Obra</button>
+    <br />
+    <button class="register-btn" routerLink="/menu">Cancelar</button>
+  </form>
+</div>
